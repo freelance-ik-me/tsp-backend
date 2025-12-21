@@ -3,7 +3,7 @@ kind: System
 metadata:
   name: TAP
 spec:
-  owner: is3devs
+  owner: is3
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -16,7 +16,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: is3@catsalut.cat
+  owner: is3
   system: TAP
   providesApis:
     - tap-api
@@ -28,7 +28,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: is3devs
+  name: is3
 spec:
   type: team
   children: []
