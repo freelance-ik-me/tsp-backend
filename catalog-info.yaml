@@ -13,10 +13,6 @@ spec:
   system: TAP
   providesApis:  # Links this component as owning an API
     - tap-api
-  consumesApis:  # Links this component as depending on an API
-    - odm-api
-  dependsOn:
-    - resource:is3database # Or other components/resources
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
