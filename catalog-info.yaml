@@ -28,8 +28,15 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: is3
+  name: is3devs
+  description: IS3 Developers
 spec:
-  type: team
+  type: business-unit
+  profile:
+    displayName: Infrastructure
+    email: infrastructure@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: ops
   children: []
+  members: []
 ---
