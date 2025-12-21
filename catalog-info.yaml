@@ -3,7 +3,7 @@ kind: System
 metadata:
   name: TAP
 spec:
-  owner: is3
+  owner: is3dev
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -16,7 +16,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: is3
+  owner: is3dev
   system: TAP
   providesApis:
     - tap-api
@@ -26,11 +26,13 @@ spec:
     - resource:is3database
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Group
+kind: API
 metadata:
-  name: is3devs
-  description: IS3 Developers
+  name: tap-api
+  description: Backend API of TAP
 spec:
-  type: team
-  children: []
----
+  type: openapi
+  lifecycle: production
+  owner: is3devs
+  definition:  # Points to actual spec, e.g., OpenAPI file
+    $text: https://raw.githubusercontent.com/openapitools/openapi-generator/master/modules/openapi-generator/src/test/resources/3_0/petstore.yaml
