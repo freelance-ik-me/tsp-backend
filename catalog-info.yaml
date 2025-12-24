@@ -1,15 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: TAP
+  name: TSP
 spec:
   owner: is3dev
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: tap-backend
-  description: Monitor d'Acces
+  name: tsp-backend
+  description: Backend TSP
   tags:
     - java
     - service
@@ -23,9 +23,9 @@ spec:
   type: service
   lifecycle: production
   owner: is3dev
-  system: TAP
+  system: TSP
   providesApis:
-    - tap-api
+    - tsp-api
   consumesApis:
     - odm-api
   dependsOn:
@@ -42,11 +42,11 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: tap-api
-  description: Backend API of TAP
+  name: tsp-api
+  description: Backend API of TSP
 spec:
   type: openapi
   lifecycle: production
   owner: is3dev
   definition:  # Points to actual spec, e.g., OpenAPI file
-    $text: https://github.com/freelance-ik-me/tap-backend/edit/main/petstore.yaml
+    $text: https://github.com/freelance-ik-me/tsp-backend/edit/main/petstore.yaml
